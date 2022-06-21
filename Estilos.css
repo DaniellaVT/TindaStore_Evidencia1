@@ -135,3 +135,16 @@ li{
 button {
     cursor: pointer;
 }
+
+.carlist {
+    padding: 0.5cm;
+    zoom: 120%;
+    background-color: rgba(0, 0, 0, 0.589);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    min-width: 50%;
+    border-radius: 5px;
+}

@@ -45,7 +45,7 @@ for (let i=0;i<4;i++){
 
     button.addEventListener("click",(event)=>event.target.parentNode.remove())
     button.addEventListener("click",(event)=>products.splice(i,1))   
-
+    button.addEventListener("click",(event)=>actualizarPrecios())
 
 
 
@@ -57,4 +57,14 @@ function setCantidad(i){
    products.splice(i,1)
 }
 
+function actualizarPrecios(){
+    total =0
+    totalcar=0
+    for (let i=0;i<4;i++){
+    
+        total = products[i].price * products[i].quantity
+        totalcar = totalcar+total
+        document.getElementById("totalcar").innerHTML = '<section class="content-container"><h3> ----------------- TOTAL A PAGAR ----------------- </h3><br><br><br><br><h4>$' + totalcar + '</h4><br></section>'
 
+    }
+}
